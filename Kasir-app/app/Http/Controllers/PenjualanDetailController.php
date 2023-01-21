@@ -6,7 +6,7 @@ use App\Models\Member;
 use App\Models\Penjualan;
 use App\Models\PenjualanDetail;
 use App\Models\Produk;
-use App\Models\Setting;
+use App\Models\setting;
 use Illuminate\Http\Request;
 use DB;
 
@@ -16,7 +16,7 @@ class PenjualanDetailController extends Controller
     {
         $produk = Produk::orderBy('nama_produk')->get();
         $member = Member::orderBy('nama')->get();
-        $setting = Setting::first();
+        $setting = setting::first();
         $transaksi = PenjualanDetail::all();
         $total = PenjualanDetail::sum('subtotal');
         $totalItem = PenjualanDetail::sum('jumlah');

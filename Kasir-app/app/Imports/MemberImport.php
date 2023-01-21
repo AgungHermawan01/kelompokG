@@ -18,7 +18,7 @@ class MemberImport implements WithHeadingRow,ToModel
             'kode_member' => 'M' . tambah_nol_didepan((int)$member->id_member + 1, 6),
             'nama' => $row['nama'],
             'alamat' => $row['alamat'],
-            'telepon' => $row['telepon'],
+            'telpon' => $row['telepon'],
         ]);
     }
 }
